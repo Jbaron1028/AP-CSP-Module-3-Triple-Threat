@@ -7,15 +7,23 @@ Name - Month Year
 import random
 
 def main() -> None:
-    pass # remove
-    # set variables for cost to play and base prize
+    cost = 1
+    base: int = 10
+    #roll three dice 
+    dice1 = random.randint(1, 6)
+    dice2 = random.randint(1, 6)
+    dice3 = random.randint(1, 6)
+    prize = 0
+    if dice1==dice2 and dice1==dice3:
+        multiplier=dice1
+        prize = multiplier*base
+    profit = int(cost)-prize
 
-    # roll three dice
-
-    # check if they are equal   
-    # if they are, calculate the prize
-
-    # output results
+    print (f"Casino collects: ${cost}")
+    print (f"Player rolls:  {dice1}-{dice2}-{dice3}")
+    print (f"Casino pays out: ${prize}")
+    print (f"Profit: ${profit}")
+    
 
 if __name__ == "__main__":
     main()
